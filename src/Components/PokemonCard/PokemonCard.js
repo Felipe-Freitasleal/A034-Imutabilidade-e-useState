@@ -5,18 +5,18 @@ import {Card, PokemonName, PokemonType, EvolveButton} from './styles'
 
 const PokemonCard = (props) => {
 
-    const evoluirPokemon = () => {
-        console.log("Cliquei no botão de evoluir")
-    }
+    // const evoluirPokemon = () => {
+    //     console.log("Cliquei no botão de evoluir")
+    // }
     
   return (
-    <Card color={}>
-        <img src={} alt={`Pokemon`}/>
-        <PokemonName>{}</PokemonName>
-        <PokemonType>{}</PokemonType>
-        <p>{}kg</p>
+    <Card color={props.cor}>
+        <img src={props.imagem} alt={`Pokemon`}/>
+        <PokemonName>{props.nome}</PokemonName>
+        <PokemonType>{props.type}</PokemonType>
+        <p>{props.peso}kg</p>
 
-        <EvolveButton onClick={() => evoluirPokemon()}>Evoluir!</EvolveButton>
+        <EvolveButton onClick={props.pokemonEvolucao} >Evoluir!</EvolveButton>
     </Card>
   )
 }
